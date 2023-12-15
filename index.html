@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Special Dates</title>
+</head>
+<body>
+    <h1>Welcome to Our Special Dates</h1>
+    <label for="datePicker">Select a Date: </label>
+    <input type="date" id="datePicker" onchange="displayImage()">
+    <br>
+    <img id="displayedImage" src="" alt="Special Date Image" style="max-width: 500px; margin-top: 20px;">
+
+    <script>
+        function displayImage() {
+            var date = document.getElementById("datePicker").value;
+            var imgElement = document.getElementById("displayedImage");
+            if (date === "2023-10-25") {
+                imgElement.src = 'rum.png'; 
+            } else if (date === "2023-03-10") {
+                imgElement.src = 'hamza.png'; 
+            } else {
+                imgElement.src = 'together.png';
+            }
+        }
+    </script>
+</body>
+</html>
